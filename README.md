@@ -123,6 +123,3 @@ python -m pytest -q -m live
 
 Flexres uses RCSB for mmCIF downloads and UniProt-to-PDB search, and PDBe/SIFTS-style mappings for chain and residue mapping. Cached files are stored under the platform cache directory by default, normally `~/.cache/flexres/`, with separate folders for structures, mappings, searches, and metadata. Use `--cache-dir` to override and `--force-redownload` to refresh cached content.
 
-## Known limitations
-
-Version 1 does not include AlphaFold structures, chi-angle analysis, molecular dynamics trajectories, pocket-local alignment, automatic docking, receptor preparation, pocket detection, GUI support, or automatic flexible-residue classification.
