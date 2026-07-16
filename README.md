@@ -1,8 +1,8 @@
-# flexres
+# FlexRes
 
-Flexres identifies residues with observed side-chain conformational differences across experimentally determined structures of the same UniProt protein.
+FlexRes identifies residues with observed side-chain conformational differences across experimentally determined structures of the same UniProt protein.
 
-It does not prove intrinsic flexibility and does not decide which residues should be flexible during docking. Large displacements can reflect loop motion, domain motion, apo/holo differences, ligand binding, oligomerisation, packing, mutations, construct differences, or experimental uncertainty.
+
 
 ## Install
 
@@ -124,7 +124,3 @@ python -m pytest -q -m live
 ## APIs and cache
 
 Flexres uses RCSB for mmCIF downloads and UniProt-to-PDB search, and PDBe/SIFTS-style mappings for chain and residue mapping. Cached files are stored under the platform cache directory by default, normally `~/.cache/flexres/`, with separate folders for structures, mappings, searches, and metadata. Use `--cache-dir` to override and `--force-redownload` to refresh cached content.
-
-## Known limitations
-
-Version 1 does not include AlphaFold structures, chi-angle analysis, molecular dynamics trajectories, pocket-local alignment, automatic docking, receptor preparation, pocket detection, GUI support, or automatic flexible-residue classification.
