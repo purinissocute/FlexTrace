@@ -122,7 +122,7 @@ class AnalysisSettings(FlexresModel):
     ligand_chain: str | None = None
     ligand_residue: int | None = None
     ligand_insertion_code: str = ""
-    pocket_radius: float = 8.0
+    pocket_radius: float = 5.0
     include_reference_entry: bool = True
     cache_dir: Path | None = None
     force_redownload: bool = False

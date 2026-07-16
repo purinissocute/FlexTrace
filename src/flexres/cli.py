@@ -31,7 +31,7 @@ def analyse(
     ligand_chain: str | None = typer.Option(None, "--ligand-chain", help="Reference ligand chain ID."),
     ligand_residue: int | None = typer.Option(None, "--ligand-residue", help="Reference ligand residue number."),
     ligand_insertion_code: str = typer.Option("", "--ligand-insertion-code", help="Reference ligand insertion code."),
-    pocket_radius: float = typer.Option(8.0, "--pocket-radius", help="Pocket heavy-atom radius in angstroms."),
+    pocket_radius: float = typer.Option(5.0, "--pocket-radius", help="Pocket heavy-atom radius in angstroms."),
     include_reference_entry: bool = typer.Option(True, "--include-reference-entry/--exclude-reference-entry"),
     cache_dir: Path | None = typer.Option(None, "--cache-dir", help="Cache directory."),
     force_redownload: bool = typer.Option(False, "--force-redownload", help="Ignore cached API responses and mmCIF files."),

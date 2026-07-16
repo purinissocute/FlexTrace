@@ -35,10 +35,10 @@ Pocket mode:
 flexres analyse \
   --pdb 8C1D \
   --chain A \
-  --ligand-name ADP \
+  --ligand-name T2F \
   --ligand-chain A \
-  --ligand-residue 402 \
-  --pocket-radius 8 \
+  --ligand-residue 401 \
+  --pocket-radius 5 \
   --output results/8C1D_A_pocket
 ```
 
@@ -79,7 +79,9 @@ Exactly one analysis selection is required: `--all-residues`, or the complete li
 
 Flexres maps the selected reference chain to one UniProt accession using PDBe/SIFTS-style residue mappings. Candidate structures are searched by the same UniProt accession, not by homologous-sequence expansion. By default, mapped residues must also match the canonical UniProt sequence. Mutated reference or comparison residues are reported and excluded from residue-level side-chain RMSD calculations, while the rest of the structure is still analysed. Residues are compared only when both structures map to the same UniProt accession and UniProt residue number. PDB residue numbers alone are not used as residue identity. PyMOL performs the default structural superposition; UniProt mapping is still used for target selection and residue identity.
 
-In pocket mode, the reference ligand is selected by ligand residue name, ligand chain, and ligand residue number. The reference pocket is every amino-acid residue in the selected reference chain with at least one protein heavy atom within the selected radius of any ligand heavy atom. Hydrogens are ignored. The resulting UniProt residue set is analysed across all comparison chains, even when the comparison structure lacks the ligand.
+In pocket mode, the reference ligand is selected by ligand residue name, ligand chain, and ligand residue number. The reference pocket is every amino-acid residue in the selected reference chain with at least one protein heavy atom within the selected radius of any ligand heavy atom. The default pocket radius is 5 angstroms. Hydrogens are ignored. The resulting UniProt residue set is analysed across all comparison chains, even when the comparison structure lacks the ligand.
+
+For docking-oriented use, select the ligand that defines the binding site or fragment elaboration site you care about. For example, in the Aurora-A 8C1D fragment series, `T2F` chain A residue 401 captures the pocket where R179 and Y199 move; using ADP instead analyses the nucleotide site and can hide that signal.
 
 For each comparison chain and model, the comparison chain is globally aligned to the reference chain. Metrics are then calculated from the aligned comparison coordinates:
 
