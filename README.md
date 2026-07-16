@@ -1,8 +1,8 @@
-# flexres
+# FlexTrace
 
 Flexres identifies residues with observed side-chain conformational differences across experimentally determined structures of the same UniProt protein.
 
-It does not prove intrinsic flexibility and does not decide which residues should be flexible during docking. Large displacements can reflect loop motion, domain motion, apo/holo differences, ligand binding, oligomerisation, packing, mutations, construct differences, or experimental uncertainty.
+
 
 ## Install
 
