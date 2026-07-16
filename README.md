@@ -1,6 +1,6 @@
 # FlexTrace
 
-Flexres identifies residues with observed side-chain conformational differences across experimentally determined structures of the same UniProt protein.
+FlexTrace identifies residues with observed side-chain conformational differences across experimentally determined structures of the same UniProt protein.
 
 
 
