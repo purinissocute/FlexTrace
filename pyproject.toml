@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "flexres"
+version = "0.1.0"
+description = "Rank experimentally observed side-chain structural variability across PDB structures for one UniProt protein."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Flexres contributors"}]
+dependencies = [
+  "gemmi>=0.6.5",
+  "biopython>=1.83",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10",
+  "requests>=2.31",
+  "pydantic>=2.0",
+  "typer>=0.12",
+  "rich>=13.0",
+  "tenacity>=8.2",
+  "platformdirs>=4.0",
+]
+
+[project.optional-dependencies]
+pymol = [
+  "pymol-open-source>=2.5",
+]
+test = [
+  "pytest>=8.0",
+  "pytest-mock>=3.12",
+  "responses>=0.25",
+]
+
+[project.scripts]
+flexres = "flexres.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "live: tests requiring live network/API access",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/flexres"]
