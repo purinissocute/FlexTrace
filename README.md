@@ -1,6 +1,6 @@
-# FlexTrace
+# FlexRes
 
-FlexTrace identifies residues with observed side-chain conformational differences across experimentally determined structures of the same UniProt protein.
+FlexRes identifies residues with observed side-chain conformational differences across experimentally determined structures of the same UniProt protein.
 
 
 
@@ -35,7 +35,7 @@ Pocket mode:
 flexres analyse \
   --pdb 8C1D \
   --chain A \
-  --ligand-name ADP \
+  --ligand-name T5L \
   --ligand-chain A \
   --ligand-residue 402 \
   --pocket-radius 8 \
